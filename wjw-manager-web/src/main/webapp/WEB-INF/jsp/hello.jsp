@@ -36,26 +36,9 @@
 			$('#tt').tabs('add', {
 				title : title,
 				closable : true,
-				tools : [ {
-					handler : function() {
-						alert('refresh');
-					}
-				} ]
+				href : 'page.do?pageName=maoPaoForm'  // 新内容的URL
 			});
-			
-			var tab = $('#tt').tabs('getSelected');  // 获取选择的面板
-			var tabindex = 'tab'+$('#tt').tabs('getTabIndex',tab);
-			var content = '<form id="'+tabindex+'" method="post"><div><label for="name">Name:</label><input class="easyui-validatebox" type="text" name="name" data-options="required:true" />   </div>   <div>   <label for="email">Email:</label>   <input class="easyui-validatebox" type="text" name="email" data-options="validType:\'email\'" /></div>...</form> ';
-			// 更新选择的面板的新标题和内容
-			$('#tt').tabs('update', {
-				tab: tab,
-				options: {
-					content: content
-				}
-			});
-			
 		}
-
 	}
 	
 </script>
