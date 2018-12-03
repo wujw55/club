@@ -18,5 +18,4 @@ public class Starter {
 		
 		SpringApplication.run(Starter.class);
 	}
-
 }

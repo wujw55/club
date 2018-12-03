@@ -15,7 +15,7 @@
     	
     	<div id="aa" class="easyui-accordion" fit="true" multiple="true">
 	    	<div title="排序"  style="overflow:auto;">
-	    	<a href="javascript:void(0)" class="easyui-linkbutton" fit="true" style="color:#0099FF;" onclick="addPanel('冒泡排序')" >冒泡排序</a><br>
+	    	<a href="javascript:void(0)" style="color:#0099FF;" onclick="addTabs('冒泡排序')" >冒泡排序</a><br>
 	    	<a href="javascript:void(0)" style="color:#0099FF;" onclick="addTabs('快速排序')" >快速排序</a>
 	    	</div>
 	    	<div title="查找"  style="overflow:auto;">
@@ -37,7 +37,6 @@
 			$('#tt').tabs('add',{
 			    title:title,
 			    closable:true,
-			    url:"ddd.jsp",
 			    tools:[{
 					handler:function(){
 						alert('refresh');
