@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * SpringBootÆô¶¯Àà¡£
- * »áÄ¬ÈÏÉ¨Ãèµ±Ç°°üºÍµ±Ç°°üµÄ×Ó°üµÄ×¢½â¡£Èç¹ûĞèÒªÉ¨ÃèÆäËû°üµÄ×¢½âĞèÒªÌí¼Ó@ComponentScan×¢½â
+ * SpringBootà¡£
+ * 
  * @author wujw5
  *
  */
-@ComponentScan("com.wjw.manager.controller")	//Ìí¼ÓÖ®ºó»á¸²¸ÇÄ¬ÈÏµÄµ±Ç°°ü¼°µ±Ç°°üµÄ×Ó°ü
+@ComponentScan("com.wjw.manager.controller")	
 @SpringBootApplication
 public class Starter {
 	
