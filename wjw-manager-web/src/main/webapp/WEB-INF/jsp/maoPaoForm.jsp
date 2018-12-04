@@ -11,7 +11,7 @@
 		<form id="from1" method="post">   
 		    <div>   
 		        <label>请输入要排序的数字(用","分隔):</label><br>   
-		        <input id="numberStr" class="easyui-textbox" style="width:900px"> 
+		        <input id="numberStr" name="numberStr" class="easyui-textbox" style="width:900px"> 
 		    </div>
 		</form>  
 		<div style="margin-top:15px">

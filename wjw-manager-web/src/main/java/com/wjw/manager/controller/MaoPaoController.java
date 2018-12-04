@@ -1,6 +1,5 @@
 package com.wjw.manager.controller;
 
-import java.lang.reflect.Array;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +16,10 @@ public class MaoPaoController {
 		System.err.println(numberStr);
 		SuanFaResult suanFaResult = new SuanFaResult();
 		try {
-			String [] numberArray = numberStr.split(" ,");
-			int [] array =null;
-			
+			String [] numberArray = numberStr.split(",");
+			int [] array = new int [numberArray.length];
 			for (int i = 0; i < numberArray.length; i++) {
-				array[i] = Integer.parseInt(numberArray[i]);
+				array[i] = (int)(Integer.parseInt(numberArray[i]));
 			}
 			long begin = System.currentTimeMillis();
 			int[] maoPao = maoPao(array);
@@ -32,6 +30,7 @@ public class MaoPaoController {
 			suanFaResult.setResult(time);
 		} catch (Exception e) {
 			suanFaResult.setMessage("输入数组错误！！");
+			e.printStackTrace();
 		}
 		
 		return suanFaResult;
