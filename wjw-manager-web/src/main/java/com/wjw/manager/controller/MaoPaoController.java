@@ -1,6 +1,8 @@
 package com.wjw.manager.controller;
 
 
+import java.util.Arrays;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,8 +27,8 @@ public class MaoPaoController {
 			int[] maoPao = maoPao(array);
 			long end = System.currentTimeMillis();
 			String time = String.valueOf(end-begin);
-			
-			suanFaResult.setResult(maoPao.toString());
+			System.out.println(time);
+			suanFaResult.setResult(Arrays.toString(maoPao));
 			suanFaResult.setTime(time);
 		} catch (Exception e) {
 			suanFaResult.setMessage("输入数组错误！！");

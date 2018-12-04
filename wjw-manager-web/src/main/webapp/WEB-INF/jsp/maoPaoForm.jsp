@@ -45,11 +45,14 @@
 			$("#from1").form('submit',{
 				url:'maopao.do',
 				success:function(data){
+					alert(data);
 					jsonstr = eval("("+data+")");
 					alert(jsonstr.result);
 					alert(jsonstr.time);
-					$("#result").val(jsonstr.result);
+					$("#result").textbox('setText',jsonstr.result);
 					$("#time").val(jsonstr.time);
+					$('#time').textbox('setText',jsonstr.time);
+
 				}
 			});
 		}	
