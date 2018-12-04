@@ -11,11 +11,11 @@
 		<form id="from1" method="post">   
 		    <div>   
 		        <label>请输入要排序的数字(用","分隔):</label><br>   
-		        <input id="numberArray" class="easyui-textbox" style="width:900px"> 
+		        <input id="numberStr" class="easyui-textbox" style="width:900px"> 
 		    </div>
 		</form>  
 		<div style="margin-top:15px">
-		   	<a id="btn" href="#" class="easyui-linkbutton">排序</a>  
+		   	<a id="btn" class="easyui-linkbutton" onclick="doSubmit()">排序</a>  
 		</div> 
 		<div style="margin-top:15px" >   
             <label>排序结果：</label><br>   
@@ -26,5 +26,16 @@
 		    <input class="easyui-textbox" style="width:900px" />   
 		</div>   
 	</div>
+	<script type="text/javascript">
+		function doSubmit(){
+			$("#from1").form('submit',{
+				url:'maopao.do',
+				success:function(data){
+					alert(data);
+				}
+			});
+		}	
+	
+	</script>
 </body>
 </html>
