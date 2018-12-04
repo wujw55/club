@@ -19,11 +19,11 @@
 		</div> 
 		<div style="margin-top:15px" >   
             <label>排序结果：</label><br>   
-		    <input class="easyui-textbox" style="width:900px" />   
+		    <input class="easyui-textbox" id = "result" style="width:900px" />   
 		</div>
 		<div style="margin-top:15px" >   
             <label>所用时间：</label><br>   
-		    <input class="easyui-textbox" style="width:900px" />   
+		    <input class="easyui-textbox" id="time" style="width:900px" />   
 		</div>   
 	</div>
 	<script type="text/javascript">
@@ -31,7 +31,11 @@
 			$("#from1").form('submit',{
 				url:'maopao.do',
 				success:function(data){
-					alert(data);
+					jsonstr = eval("("+data+")");
+					alert(jsonstr.result);
+					alert(jsonstr.time);
+					$("#result").val(jsonstr.result);
+					$("#time").val(jsonstr.time);
 				}
 			});
 		}	
