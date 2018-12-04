@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
 <body>
 	<form id="ff" method="post">   
     <div>   
@@ -19,5 +20,37 @@
     </div>     
 </form>  
 	
+
+	<div align="left" >
+		<form id="from1" method="post">   
+		    <div>   
+		        <label>请输入要排序的数字(用","分隔):</label><br>   
+		        <input id="numberStr" name="numberStr" class="easyui-textbox" style="width:900px"> 
+		    </div>
+		</form>  
+		<div style="margin-top:15px">
+		   	<a id="btn" class="easyui-linkbutton" onclick="doSubmit()">排序</a>  
+		</div> 
+		<div style="margin-top:15px" >   
+            <label>排序结果：</label><br>   
+		    <input class="easyui-textbox" style="width:900px" />   
+		</div>
+		<div style="margin-top:15px" >   
+            <label>所用时间：</label><br>   
+		    <input class="easyui-textbox" style="width:900px" />   
+		</div>   
+	</div>
+	<script type="text/javascript">
+		function doSubmit(){
+			$("#from1").form('submit',{
+				url:'maopao.do',
+				success:function(data){
+					alert(data);
+				}
+			});
+		}	
+	
+	</script>
+
 </body>
 </html>

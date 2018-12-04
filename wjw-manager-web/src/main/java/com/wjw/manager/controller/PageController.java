@@ -9,8 +9,6 @@ public class PageController {
 	
 	@RequestMapping("/page")
 	public String toPage(@RequestParam String pageName){
-		System.err.println(pageName);
-		
 		return pageName;
 		
 	}
