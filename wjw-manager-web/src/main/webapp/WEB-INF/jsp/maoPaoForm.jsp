@@ -7,6 +7,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
+<body>
+	<form id="ff" method="post">   
+    <div>   
+        <label for="name">Name:</label>   
+        <input class="easyui-validatebox" type="text" name="name" data-options="required:true" />   
+    </div>   
+    <div>   
+        <label for="email">Email:</label>   
+        <input class="easyui-validatebox" type="text" name="email" data-options="validType:'email'" />   
+    </div>     
+</form>  
+	
+
 	<div align="left" >
 		<form id="from1" method="post">   
 		    <div style="margin-top:15px">   
@@ -31,15 +45,19 @@
 			$("#from1").form('submit',{
 				url:'maopao.do',
 				success:function(data){
+					alert(data);
 					jsonstr = eval("("+data+")");
 					alert(jsonstr.result);
 					alert(jsonstr.time);
-					$("#result").val(jsonstr.result);
+					$("#result").textbox('setText',jsonstr.result);
 					$("#time").val(jsonstr.time);
+					$('#time').textbox('setText',jsonstr.time);
+
 				}
 			});
 		}	
 	
 	</script>
+
 </body>
 </html>

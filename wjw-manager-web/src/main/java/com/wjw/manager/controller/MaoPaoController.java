@@ -26,7 +26,6 @@ public class MaoPaoController {
 			int[] maoPao = maoPao(array);
 			long end = System.currentTimeMillis();
 			String time = String.valueOf(end-begin);
-			
 			suanFaResult.setResult(Arrays.toString(maoPao));
 			suanFaResult.setTime(time);
 		} catch (Exception e) {
