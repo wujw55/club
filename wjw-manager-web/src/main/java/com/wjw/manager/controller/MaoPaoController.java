@@ -29,7 +29,8 @@ public class MaoPaoController {
 			suanFaResult.setResult(Arrays.toString(maoPao));
 			suanFaResult.setTime(time);
 		} catch (Exception e) {
-			suanFaResult.setMessage("输入数组错误！！");
+			suanFaResult.setFlag("false");
+			suanFaResult.setMessage("输入数组格式错误！！");
 			e.printStackTrace();
 		}
 		

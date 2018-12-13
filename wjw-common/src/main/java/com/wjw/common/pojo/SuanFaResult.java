@@ -11,9 +11,16 @@ public class SuanFaResult {
 	private String result;
 	private String time;
 	private String message;
+	private String flag;
 	
 	public String getResult() {
 		return result;
+	}
+	public String getFlag() {
+		return flag;
+	}
+	public void setFlag(String flag) {
+		this.flag = flag;
 	}
 	public void setResult(String result) {
 		this.result = result;
